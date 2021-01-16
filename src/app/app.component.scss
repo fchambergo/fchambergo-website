@@ -1,22 +1,35 @@
 .navbar {
-    // display: grid;
-    // grid-template-columns: 1fr repeat(4, 100px);
-    // justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    justify-content: center;
     background-color: #212121;
     padding: 2rem;
     padding-left: 4rem;
 
+    @media only screen and (max-width: 1200px){
+        grid-template-columns: 1fr;
+    }
+
     &__items {
         display: grid;
-        grid-template-columns: 1fr repeat(5, 10rem);
+        grid-template-columns: 1fr repeat(4, 10rem);
         justify-items: center;
+        align-items: center;
 
         list-style: none;
+
+        @media only screen and (max-width: 1200px) {
+            display: none;
+        }
     }
 
     &__item {
         &--1 {
             justify-self: start;
+
+            @media only screen and (max-width: 1200px) {
+                justify-self: center;
+            }
         }
     }
 
@@ -29,4 +42,63 @@
             font-weight: 400;
         }
     }
+}
+
+.menu-toggle {
+    justify-self: end;
+    margin-right: 25px;
+
+    display: none;
+
+    @media only screen and (max-width: 1200px) {
+        display: grid;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__bar {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 3px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+// DROPDOWN MENU
+
+.menu-dropdown-cover {
+    @media only screen and (max-width: 1200px) {
+        display: grid;
+        height: 100vh;
+        z-index: 1;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+// HAMBURGER MENU BARS
+
+.menu-toggle.is-active .menu-toggle__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-active .menu-toggle__bar:nth-child(1){
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+  
+.menu-toggle.is-active .menu-toggle__bar:nth-child(3){
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    -ms-transform: translateY(-10px) rotate(-45deg);
+    -o-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
 }

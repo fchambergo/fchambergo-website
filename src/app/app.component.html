@@ -1,4 +1,10 @@
 <nav class="navbar">
+    
+    <div class="menu-toggle" (click)="toggleNav()">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+    </div>
     <ul class="navbar__items">
         <li class="navbar__item navbar__item--1"><a href="#" class="navbar__link">Frank Chambergo</a></li>
         <li class="navbar__item navbar__item--2"><a href="#" class="navbar__link">About</a></li>
@@ -6,6 +12,7 @@
         <li class="navbar__item navbar__item--4"><a href="#" class="navbar__link">Journey</a></li>
         <li class="navbar__item navbar__item--5"><a href="#" class="navbar__link">Contact</a></li>
     </ul>
+    
 </nav>
 
 <app-landing-page></app-landing-page>
