@@ -7,6 +7,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { JourneyComponent } from './journey/journey.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { JourneyComponent } from './journey/journey.component';
     LandingPageComponent,
     AboutComponent,
     WorkComponent,
-    JourneyComponent
+    JourneyComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
