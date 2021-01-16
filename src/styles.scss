@@ -1,1 +1,46 @@
+$color-white: #ffffff;
+
+//RESPONSIVE ENDPOINTS
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+$font-primary: 'Poppins', sans-serif;
+
 /* You can add global styles to this file, and also import other style files */
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: $font-primary;
+
+    color: white;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+@media (min-width: $bp-medium) {
+    .col-md-6 {
+        grid-column: span 6;
+    }
+}
+
+@media (min-width: $bp-largest) {
+    .col-md-12 {
+        grid-column: span 12;
+    }
+}
