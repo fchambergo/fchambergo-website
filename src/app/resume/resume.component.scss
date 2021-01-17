@@ -1,6 +1,61 @@
 .background {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: linear-gradient(to bottom right, #04181f 25%, #4c8088 100%);
     background-size: cover;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+}
+
+.resume {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 5rem;
+    grid-template-rows:  80vh;
+    grid-template-columns: 150vh;
+
+    @media only screen and (max-width: 1200px) {
+        padding: 0;
+    }
+    
+    
+    &__background {
+        background-color: #f7f7f7;
+        border-radius: 25px;
+        box-shadow: 1px 1px 30px 5px #103C4F;
+        padding: 5px;
+
+        display: grid;
+        //box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.6);
+
+        // @media only screen and (max-width: 1200px) {
+        //     grid-template-rows: 100vh;
+        //     grid-template-columns: 100vh;
+        // }
+    }
+
+    &__component {
+        display: grid;
+
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+
+        &__info {
+            grid-column:  1 / 6;
+            justify-self: center;
+            text-transform: uppercase;
+        }
+
+        &__contact {
+            grid-row: 2 / 4;
+            grid-column: 1 / 2;
+            justify-items: start;
+        }
+    }
 }
