@@ -1,0 +1,37 @@
+.skills__container {
+    display: grid;
+
+    grid-template-rows: 5vh 10vh 60vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.skills__type {
+
+    grid-row: 3 / -1;
+
+    &--pl {
+        grid-column: 1 / 2;
+    }
+
+    &--databases {
+        grid-column: 2 / 3;
+    }
+
+    &--wd {
+        grid-column: 3 / 4;
+    }
+
+    &--graphic {
+        grid-column: 4 / 5;
+    }
+}
+
+.skills__title {
+    justify-self: center;
+    grid-row: 2 / 3;
+}
+
+.skills__skill {
+    text-align: center;
+}
