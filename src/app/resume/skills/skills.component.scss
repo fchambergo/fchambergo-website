@@ -1,7 +1,7 @@
 .skills__container {
     display: grid;
 
-    grid-template-rows: 5vh 10vh 60vh;
+    grid-template-rows: max-content 10vh 60vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
 }
@@ -29,9 +29,34 @@
 
 .skills__title {
     justify-self: center;
+    align-self: center;
     grid-row: 2 / 3;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: #04181F;
 }
 
 .skills__skill {
     text-align: center;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.skill {
+    padding: 12px 30px;
+    background-color: #103C4F;
+    color: white;
+}
+
+.title {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    font-weight: 700;
+    font-size: 3rem;
+    opacity: .3;
+    letter-spacing: 10px;
 }
