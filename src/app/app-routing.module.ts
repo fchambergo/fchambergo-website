@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'home', component: LandingPageComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'work', component: WorkComponent },
-  { path: 'journey', component: JourneyComponent }
+  { path: 'journey', component: JourneyComponent },
+  { path: '**', component: LandingPageComponent }
 
 ];
 
