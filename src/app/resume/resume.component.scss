@@ -1,8 +1,12 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 .resume {
     &-container {
         display: grid;
-        grid-template-columns: 30vh 1fr 40vh;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 42vh 1fr 38vh;
+        grid-template-rows: repeat(2, 1fr);
         padding: 4rem;
         grid-gap: 3rem;
     }
@@ -12,6 +16,14 @@
         padding: 1.5rem;
         padding-bottom: 2.5rem;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    &__title {
+        font-size: 1rem;
+        margin-left: .1rem;
+        text-transform: uppercase;
+        font-weight: 100;
+        letter-spacing: .8rem;
     }
 }
 
@@ -54,5 +66,65 @@
 
     &__name {
         text-align: center;
+    }
+}
+
+.education {
+    display: grid;
+    grid-template-rows: 1.5rem 1fr 1fr;
+    grid-row-gap: 15px;
+}
+
+.college {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    grid-column-gap: 8px;
+    grid-row-gap: 4px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: #AFAFAF 0px 10px 10px -10px;
+
+    &--umd {
+        border-left: 4px solid #AD2F26;
+    }
+
+    &--mc {
+        border-left: 4px solid #431C53;
+    }
+
+    &__logo {
+        width: 60px;
+        height: 60px;
+        grid-row: 1 / -1;
+    }
+
+    &--degree {
+        font-size: .7rem;
+        align-self: flex-end;
+    }
+
+    &--name {
+        font-size: .6rem;
+        font-weight: 300;
+        grid-row: 2 / 3;
+        grid-column: 2 / -1;
+        align-self: flex-start;
+    }
+
+    &--date {
+        font-size: .5rem;
+        font-weight: 300;
+        align-self: flex-end;
+    }
+
+    &--location {
+        font-size: .5rem;
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+        font-weight: 300;
+        justify-self: end;
+        align-self: flex-start;
     }
 }
