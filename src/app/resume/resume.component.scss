@@ -7,7 +7,7 @@
         display: grid;
         grid-template-columns: 42vh 1fr 38vh;
         grid-template-rows: repeat(2, 1fr);
-        padding: 4rem;
+        padding: 2.5rem;
         grid-gap: 3rem;
     }
 
@@ -126,5 +126,110 @@
         font-weight: 300;
         justify-self: end;
         align-self: flex-start;
+    }
+}
+
+.experience {
+    grid-row: 1 / -1;
+    grid-column: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.job {
+    border-radius: 10px;
+    padding-left: 7px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &--geico {
+        border-left: 6px solid #104293;
+    }
+
+    &__info {
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-rows: 50% 50%;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 4px;
+        padding: 10px;
+
+        &--logo {
+            width: 90px;
+            height: 60px;
+            grid-row: 1 / -1;
+        }
+
+        &--title {
+            font-size: .9rem;
+            align-self: flex-end;
+        }
+    
+        &--company {
+            font-size: .8rem;
+            font-weight: 300;
+            grid-row: 2 / 3;
+            grid-column: 2 / -1;
+            align-self: flex-start;
+        }
+
+        &--type {
+            font-size: .65rem;
+            font-weight: 100;
+            letter-spacing: 1px;
+            margin-left: .4rem;
+        }
+    
+        &--date {
+            font-size: .7rem;
+            font-weight: 200;
+            align-self: flex-end;
+        }
+    
+        &--location {
+            font-size: .7rem;
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
+            font-weight: 200;
+            justify-self: end;
+            align-self: flex-start;
+        }
+    }
+
+    &__description {
+        font-size: .8rem;
+        font-weight: 300;
+        margin: 5px 30px;
+
+        &--entry {
+            padding: 2px;
+        }
+
+        &--chevron {
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+            fill: #04181F;
+        }
+    }
+
+    &__technologies {
+        font-size: .7rem;
+        font-weight: 200;
+        margin-left: 15px;
+        display: flex;
+
+        &--tech {
+            padding: .4rem 1rem;
+            background-color: #104293;
+            color: white;
+            border-radius: .2rem;
+            margin-right: 4px;
+        }
     }
 }
