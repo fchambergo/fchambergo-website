@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Youtube Citer",
+        "github": "https://github.com/fchambergo/youtube-citer",
+        "description": "This web application cites a youtube video for a bibliography in MLA, APA, Harvard, and Chicago formats.",
+        "video": "",
+        "technologies": ["Angular", "HTML", "CSS"]
+    },
+    {
+        "name": "Prince George's County Crime Incidents Visualization",
+        "github": "https://github.com/fchambergo/PG-Crime-Incidents",
+        "description": "This project uses the Prince George's County Open Data API to access the Crime Incidents February 2017 to Present Dataset to see a pattern of crime in Prince George's County and predict if crime will occur in the future.",
+        "video": "",
+        "technologies": ["React.js", "Chart.js", "HTML", "CSS" ,"Selenium"]
+    },
+    {
+        "name": "UMD Course Department Comparison",
+        "github": "https://github.com/fchambergo/UMD-Course-Department-Level-Comparison",
+        "description": "This project uses the RESTful UMD API to gather undergraduate course information on UMD course departments. This implements a Graphical User Interface to select two departments and compares the number of level 100, 200, 300 and 400 level courses in bar graphs.",
+        "video": "",
+        "technologies": ["Python", "Numpy", "Pandas", "Matplotlib"]
+    },
+    {
+        "name": "Muan Barber Shop",
+        "github": "https://github.com/fchambergo/MuanBarberShop",
+        "description": "A web design concept for a local barber shop in my neighborhood. Designed in Adobe XD",
+        "video": "",
+        "technologies": ["HTML", "CSS"]
+    }
+]
