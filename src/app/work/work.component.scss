@@ -1,0 +1,56 @@
+.work {
+    &-container {
+        padding: 2.5rem;
+        background-color: #FFFFFF;        
+    }
+
+    &-title {
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &-projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr)
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 200;
+        text-transform: uppercase;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        color: white;
+
+        &--github {
+            background-color: #24292e;
+        }
+
+        &--website {
+            background-color: #103C4F;
+        }
+    }
+
+    &__description {
+        font-weight: 100;
+    }
+
+    &__technologies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        color: white;
+
+        &--tech {
+            background-color: #04181F;
+        }
+    }
+}
