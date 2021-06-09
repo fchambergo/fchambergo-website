@@ -1,1 +1,17 @@
-<p>work works!</p>
+<div class="work-container">
+    <h4 class="work-title">Coding Projects</h4>
+    <div class="work-projects-container">
+        <div class="project" *ngFor="let project of projects">
+            <div class="project__title">{{project?.name}}</div>
+            <div class="project__links">
+                <div class="project__links-button" (click)="goToLink(project.github)">GitHub</div>
+                <div *ngIf="project?.website?.length > 0" class="project__links-button" (click)="goToLink(project.website)">Website</div>
+                <div *ngIf="project?.adobexd?.length > 0" class="project__links-button" (click)="goToLink(project.adobexd)">Wireframe</div>
+            </div>
+            <div class="project__description">{{project?.description}}</div>
+            <div class="project__technologies">
+                <div class="project__technologies--tech" *ngFor="let tech of project?.technologies">{{tech}}</div>
+            </div>
+        </div>
+    </div>
+</div>

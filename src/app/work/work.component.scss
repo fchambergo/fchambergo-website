@@ -1,0 +1,71 @@
+.work {
+    &-container {
+        padding: 4rem;
+        background-color: #FFFFFF;        
+    }
+
+    &-title {
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &-projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: max-content;
+        grid-column-gap: 10rem;
+        grid-row-gap: 6rem;
+        margin-top: 3rem;
+
+        @media only screen and (max-width: 1300px){
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        column-gap: .8rem;
+        color: white;
+        font-size: .8rem;
+
+        &-button {
+            padding: .4rem .8rem;
+            background-color: #04181F;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    }
+
+    &__description {
+        font-weight: 100;
+        margin: 1rem 0px;
+    }
+
+    &__technologies {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        row-gap: 10px;
+        flex-wrap: wrap;
+        color: white;
+        font-size: .8rem;
+
+        &--tech {
+            background-color: #4C8088;
+            padding: .5rem 1rem;
+            border-radius: 25px;
+        }
+    }
+}
