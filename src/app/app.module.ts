@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ResumeComponent } from './resume/resume.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     CommonModule,
     RouterModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
