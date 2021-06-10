@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
   { path: 'work', component: WorkComponent },
   { path: 'journey', component: JourneyComponent },
+  { path: 'about', component: AboutComponent },
   { path: '**', component: LandingPageComponent }
 
 ];
