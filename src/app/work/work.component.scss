@@ -1,7 +1,11 @@
 .work {
     &-container {
         padding: 4rem;
-        background-color: #FFFFFF;        
+        background-color: #FFFFFF;   
+        
+        @media only screen and (max-width: 768px) {
+            padding: 2rem;
+        }
     }
 
     &-title {
