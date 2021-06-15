@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
+  goToLink(link: string) {
+    window.open(link, "_blank")
+  }
 }
