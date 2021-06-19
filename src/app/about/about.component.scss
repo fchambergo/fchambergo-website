@@ -312,3 +312,33 @@
         }
     }
 }
+
+
+.certification {
+    &__cert {
+        padding: 2rem 3rem;
+        border-radius: .2rem;
+        width: max-content;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        &--container {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+
+        &--title {
+            margin-top: 0;
+        }
+
+        &--date-issued {
+            font-weight: 200;
+        }
+
+        &--view {
+            color: #4C8088;
+            text-decoration: none;
+        }
+    }
+}
