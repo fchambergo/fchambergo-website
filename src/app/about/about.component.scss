@@ -1,28 +1,447 @@
-.about {
-    &-container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 5rem;
-        width: 1140px;
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    row-gap: 15vw;
+
+    &__container {
+        margin-left: 20rem;
+        margin-right: 20rem;
+
+        @media screen and (max-width: 1600px) {
+            margin-left: 10rem;
+            margin-right: 10rem;
+        }
 
         @media screen and (max-width: 1200px) {
-            width: 768px;
+            margin-left: 4rem;
+            margin-right: 4rem;
         }
 
         @media screen and (max-width: 768px) {
-            width: 100%;
+            margin-left: 2rem;
+            margin-right: 2rem;
         }
     }
 
-    &-heading {
-        font-weight: 300;
-        font-size: 2rem;
+    &__header {
+        font-weight: 200;
+        font-size: 6vh;
         text-transform: uppercase;
+        letter-spacing: 1vw;
+
+        @media screen and (max-width: 768px) {
+            // letter-spacing: .1rem;
+            font-size: 4vh;
+        }
     }
 
-    &-paragraph {
-        line-height: 2.5;
+    &__paragraph {
+        line-height: 4rem;
+        font-weight: 100;
+        font-size: 3vh;
+    }
+}
+
+.about {
+    &-container {
+        @media screen and (max-width: 1200px) {
+        }
+
+        @media screen and (max-width: 768px) {
+        }
+    }
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6vh;
+
+    &__job {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+        &--responsibilities {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            font-size: 2vh;
+            font-weight: 300;
+            line-height: 1.5rem;
+    
+            &-entry {
+                line-height: 5vh;
+
+                @media screen and (max-width: 1000px) {
+                }
+
+                &--chevron {
+                    width: 2vh;
+                    height: 2vh;
+                    margin-right: 10px;
+                    fill: #04181F;
+                }
+            }
+        }
+
+        &--technologies {
+            font-size: 2vh;
+            font-weight: 200;
+            row-gap: 8px;
+            column-gap: 5px;
+            display: flex;
+            flex-wrap: wrap;
+    
+            &--tech {
+                padding: .4rem 1rem;
+                color: white;
+                border-radius: .2rem;
+                margin-right: 4px;
+    
+                &-geico {
+                    background-color: #104293;
+                }
+    
+                &-dap {
+                    background-color: #555555;
+                }
+    
+                &-altamira {
+                    background-color: #739BC1;
+                }
+            }
+        }
+    }
+
+    &__job__entry {
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-rows: max-content max-content;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 4px;
+        padding: 10px;
+        font-size: 2vh;
+
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: max-content max-content max-content;
+            padding: 0;
+        }
+
+        &--logo {
+            grid-row: 1 / -1;
+
+            @media screen and (max-width: 1000px) {
+                display: none;
+            }
+
+            &-geico {
+                width: 90px;
+                height: 60px;
+            }
+
+            &-dap {
+                width: 62px;
+                height: 62px;
+            }
+
+            &-altamira {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        &--title {
+            align-self: flex-end;
+
+            @media screen and (max-width: 1000px) {
+                grid-column: 1/-1;
+                grid-row: 1/2;
+            }
+        }
+    
+        &--company {
+            font-weight: 300;
+            grid-row: 2 / 3;
+            grid-column: 2 / -1;
+            align-self: flex-start;
+
+            @media screen and (max-width: 1000px) {
+                grid-column: 1/-1;
+                grid-row: 2/3;
+                justify-self: flex-start;
+            }
+        }
+
+        &--type {
+            font-weight: 100;
+            letter-spacing: 1px;
+            margin-left: .4rem;
+            font-size: 1.6vh;
+        }
+    
+        &--date {
+            font-weight: 200;
+            align-self: flex-end;
+
+            @media screen and (max-width: 1000px) {
+                grid-column: 1/2;
+                grid-row: 3/4;
+                justify-self: flex-start;
+            }
+        }
+    
+        &--location {
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
+            font-weight: 200;
+            justify-self: end;
+            align-self: flex-start;
+
+            @media screen and (max-width: 1000px) {
+                grid-column: 2/3;
+                grid-row: 3/4;
+                justify-self: flex-end;
+            }
+        }
+    }
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+
+    &__school {
+        display: flex;
+        flex-direction: column;
+        row-gap: .6rem;
+
+        &--coursework {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            font-size: 2vh;
+            font-weight: 300;
+            line-height: 1.2rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 3.5vw;
+            }
+
+            &-heading {
+                font-size: 2vh;
+                font-weight: 200;
+            }
+
+            &-entry {
+                &--chevron {
+                    width: 2vh;
+                    height: 2vh;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &--info {
+            display: grid;
+            grid-template-columns: max-content 1fr 1fr;
+            grid-template-rows: max-content max-content;
+            grid-row: 1 / 2;
+            grid-column: 3 / -1;
+            grid-column-gap: 12px;
+            grid-row-gap: 5px;
+            font-size: 2vh;
+
+            @media screen and (max-width: 768px) {
+                grid-template-columns: max-content 1fr max-content;
+                grid-template-rows: 1fr 1fr;
+                padding: 0;
+                font-size: 3vw;
+            }
+
+            &-logo {
+                width: 80px;
+                height: 80px;
+                grid-row: 1 / -1;
+                align-self: center;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+        
+            &-degree {
+                align-self: flex-end;
+
+                @media screen and (max-width: 768px) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+            }
+        
+            &-name {
+                font-weight: 300;
+                grid-row: 2 / 3;
+                grid-column: 2 / -1;
+                align-self: flex-start;
+
+                @media screen and (max-width: 768px) {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+            }
+        
+            &-date {
+                font-weight: 200;
+                align-self: flex-end;
+                justify-self: end;
+
+                @media screen and (max-width: 768px) {
+                    grid-column: 2/-1;
+                    grid-row: 1/2;
+                }
+            }
+        
+            &-location {
+                grid-row: 2 / 3;
+                grid-column: 3 / 4;
+                font-weight: 200;
+                justify-self: end;
+                align-self: flex-start;
+
+                @media screen and (max-width: 768px) {
+                    grid-column: 2/-1;
+                    grid-row: 2/-1;
+                }
+            }
+        }
+    }
+}
+
+
+.certification {
+    &__cert {
+        padding: 2rem 3rem;
+        border-radius: .2rem;
+        width: max-content;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        @media screen and (max-width: 768px) {
+            padding: 1rem;
+        }
+
+        &--container {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+
+        &--title {
+            margin-top: 0;
+        }
+
+        &--date-issued {
+            font-weight: 200;
+        }
+
+        &--view {
+            color: #4C8088;
+            text-decoration: none;
+        }
+    }
+}
+
+.volunteer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+
+    &__gig {
+        display: flex;
+        flex-direction: column;
+        row-gap: .6rem;
+
+        &--info {
+            font-size: 2vh;
+
+            &-title {
+                font-weight: 500;
+            }
+
+            &-org {
+                font-weight: 200;
+            }
+
+            &-paragraph {
+                font-size: 2vh;
+                font-weight: 200;
+            }
+
+            &--responsibilities {
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+                font-size: 2vh;
+                font-weight: 300;
+                line-height: 5vh;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 1.8vh;
+                    font-weight: 300;
+                }
+
+                &-entry {
+                    &--chevron {
+                        width: 2vh;
+                        height: 2vh;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        
+            &-date {
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+
+    &__category {
+        text-align: center;
+
+        &--title {
+            font-weight: 400;
+            text-decoration: underline;
+            margin: 4rem 0;
+        }
+
+        &--technologies {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1rem;
+
+            &-tech {
+                color: white;
+                padding: 1rem 2rem;
+                width: max-content;
+                background-color: #103C4F;
+            }
+        }
     }
 }
