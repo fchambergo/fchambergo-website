@@ -1,0 +1,14 @@
+.journey {
+    padding: 4vw;
+
+    &__heading {
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: 200;
+    }
+
+    &__paragraph {
+        font-size: 1.2em;
+        font-weight: 100;
+    }
+}
