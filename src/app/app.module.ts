@@ -8,7 +8,6 @@ import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { JourneyComponent } from './journey/journey.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ResumeComponent } from './resume/resume.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +21,6 @@ import { ContactComponent } from './contact/contact.component';
     WorkComponent,
     JourneyComponent,
     NavbarComponent,
-    ResumeComponent,
     ContactComponent
   ],
   imports: [
