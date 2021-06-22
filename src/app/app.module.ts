@@ -12,6 +12,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     WorkComponent,
     JourneyComponent,
     NavbarComponent,
-    ResumeComponent
+    ResumeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
