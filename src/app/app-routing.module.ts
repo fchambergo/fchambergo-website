@@ -8,7 +8,7 @@ import { WorkComponent } from './work/work.component';
 
 const routes: Routes = [
   { path: 'home', component: LandingPageComponent },
-  { path: 'work', component: WorkComponent },
+  { path: 'portfolio', component: WorkComponent },
   { path: 'journey', component: JourneyComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
