@@ -30,6 +30,7 @@
         position: relative;
         top: 10%;
         transform: translate(0%, -10%);
+        justify-items: center;
 
         @media only screen and (max-width: 1200px) {
             position: relative;
@@ -77,17 +78,34 @@
 .header-sub--description {
     width: 80%;
     font-weight: 200;
+    text-align: center;
 
     @media only screen and (max-width: 768px) {
         width: 100%;
     }
 }
 
-.header-resume {
+.header-view-links {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
+
+    @media only screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+
+.header-link-button {
     text-decoration: none;
     color: white;
     width: max-content;
     padding: 1rem 1.5rem;
     border: 2px solid white;
     border-radius: 10px;
+
+    @media only screen and (max-width: 1000px) {
+        width: 100%;
+        text-align: center;
+    }
 }
