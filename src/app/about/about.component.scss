@@ -7,6 +7,11 @@
     &__container {
         margin-left: 10vw;
         margin-right: 10vw;
+
+        @media screen and (max-width: 768px) {
+            margin-left: 8vw;
+            margin-right: 8vw;
+        }
     }
 
     &__header {
@@ -195,36 +200,39 @@
 }
 
 .education {
-    display: flex;
-    flex-direction: column;
-    row-gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+
+    @media screen and (max-width: 1500px) {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
 
     &__school {
         display: flex;
         flex-direction: column;
         row-gap: .6rem;
+        font-size: 2vh;
 
         &--coursework {
             display: flex;
             flex-direction: column;
             row-gap: 1rem;
-            font-size: 2vh;
+
             font-weight: 300;
             line-height: 1.2rem;
 
-            @media screen and (max-width: 768px) {
-                font-size: 3.5vw;
-            }
-
             &-heading {
-                font-size: 2vh;
                 font-weight: 200;
             }
 
             &-entry {
+                font-weight: 200;
+
                 &--chevron {
-                    width: 2vh;
-                    height: 2vh;
+                    width: 1.5vh;
+                    height: 1.5vh;
                     margin-right: 10px;
                 }
             }
