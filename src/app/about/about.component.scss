@@ -1,7 +1,12 @@
+h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
 .section {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 6vw 0;
     row-gap: 10vw;
 
     &__container {
@@ -15,10 +20,11 @@
     }
 
     &__header {
-        font-weight: 200;
-        font-size: 6vh;
+        font-weight: 100;
+        font-size: 5vh;
         text-transform: uppercase;
-        letter-spacing: 1vw;
+        letter-spacing: .7vw;
+        margin-bottom: 10vw;
 
         @media screen and (max-width: 768px) {
             font-size: 4vh;
@@ -412,7 +418,7 @@
 
         &--title {
             font-weight: 200;
-            margin: 4rem 0;
+            margin: 3rem 0;
         }
 
         &--technologies {

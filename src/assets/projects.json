@@ -17,7 +17,7 @@
         "github": "https://github.com/fchambergo/PG-Crime-Incidents",
         "description": "This project uses the Prince George's County Open Data API to access the Crime Incidents February 2017 to Present Dataset to see a pattern of crime in Prince George's County and predict if crime will occur in the future.",
         "video": "",
-        "technologies": ["React.js", "Chart.js", "HTML", "CSS" ,"Selenium"]
+        "technologies": ["React", "Chart.js", "HTML", "CSS" ,"Semantic UI"]
     },
     {
         "name": "UMD Course Department Comparison",
@@ -37,6 +37,6 @@
         "github": "https://github.com/fchambergo/MuanBarberShop",
         "description": "A web design concept for a local barber shop in my neighborhood. Designed in Adobe XD",
         "video": "",
-        "technologies": ["HTML", "CSS", "Node.js"]
+        "technologies": ["HTML", "CSS"]
     }
 ]
