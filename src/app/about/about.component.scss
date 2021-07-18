@@ -1,45 +1,44 @@
+h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
 .section {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
-    row-gap: 15vw;
+    padding: 6vw 0;
+    row-gap: 10vw;
 
     &__container {
-        margin-left: 20rem;
-        margin-right: 20rem;
-
-        @media screen and (max-width: 1600px) {
-            margin-left: 10rem;
-            margin-right: 10rem;
-        }
-
-        @media screen and (max-width: 1200px) {
-            margin-left: 4rem;
-            margin-right: 4rem;
-        }
+        margin-left: 10vw;
+        margin-right: 10vw;
 
         @media screen and (max-width: 768px) {
-            margin-left: 2rem;
-            margin-right: 2rem;
+            margin-left: 8vw;
+            margin-right: 8vw;
         }
     }
 
     &__header {
-        font-weight: 200;
-        font-size: 6vh;
+        font-weight: 100;
+        font-size: 5vh;
         text-transform: uppercase;
-        letter-spacing: 1vw;
+        letter-spacing: .7vw;
+        margin-bottom: 10vw;
 
         @media screen and (max-width: 768px) {
-            // letter-spacing: .1rem;
             font-size: 4vh;
         }
     }
 
     &__paragraph {
         line-height: 4rem;
-        font-weight: 100;
-        font-size: 3vh;
+        font-weight: 200;
+        font-size: 2.5vh;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 2vh;
+        }
     }
 }
 
@@ -66,8 +65,8 @@
         &--responsibilities {
             display: flex;
             flex-direction: column;
-            row-gap: 1rem;
-            font-size: 2vh;
+            row-gap: .2rem;
+            font-size: 1.8vh;
             font-weight: 300;
             line-height: 1.5rem;
     
@@ -78,8 +77,8 @@
                 }
 
                 &--chevron {
-                    width: 2vh;
-                    height: 2vh;
+                    width: 1.5vh;
+                    height: 1.5vh;
                     margin-right: 10px;
                     fill: #04181F;
                 }
@@ -211,36 +210,39 @@
 }
 
 .education {
-    display: flex;
-    flex-direction: column;
-    row-gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+
+    @media screen and (max-width: 1500px) {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
 
     &__school {
         display: flex;
         flex-direction: column;
         row-gap: .6rem;
+        font-size: 2vh;
 
         &--coursework {
             display: flex;
             flex-direction: column;
             row-gap: 1rem;
-            font-size: 2vh;
+
             font-weight: 300;
             line-height: 1.2rem;
 
-            @media screen and (max-width: 768px) {
-                font-size: 3.5vw;
-            }
-
             &-heading {
-                font-size: 2vh;
                 font-weight: 200;
             }
 
             &-entry {
+                font-weight: 200;
+
                 &--chevron {
-                    width: 2vh;
-                    height: 2vh;
+                    width: 1.5vh;
+                    height: 1.5vh;
                     margin-right: 10px;
                 }
             }
@@ -357,9 +359,14 @@
 }
 
 .volunteer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 4rem;
+    column-gap: 2rem;
+
+    @media screen and (max-width: 1700px) {
+        grid-template-columns: 1fr;
+    }
 
     &__gig {
         display: flex;
@@ -378,27 +385,22 @@
             }
 
             &-paragraph {
-                font-size: 2vh;
+                font-size: 1.8vh;
                 font-weight: 200;
+                line-height: 4vh;
             }
 
             &--responsibilities {
                 display: flex;
                 flex-direction: column;
-                row-gap: 1rem;
-                font-size: 2vh;
-                font-weight: 300;
-                line-height: 5vh;
-
-                @media screen and (max-width: 768px) {
-                    font-size: 1.8vh;
-                    font-weight: 300;
-                }
+                font-size: 1.8vh;
+                font-weight: 200;
+                line-height: 4vh;
 
                 &-entry {
                     &--chevron {
-                        width: 2vh;
-                        height: 2vh;
+                        width: 1.5vh;
+                        height: 1.5vh;
                         margin-right: 10px;
                     }
                 }
@@ -412,29 +414,19 @@
 }
 
 .skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-    }
-
-
     &__category {
-        text-align: center;
 
         &--title {
-            font-weight: 400;
-            text-decoration: underline;
-            margin: 4rem 0;
+            font-weight: 200;
+            margin: 3rem 0;
         }
 
         &--technologies {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
             row-gap: 1rem;
+            column-gap: 1rem;
+            flex-wrap: wrap;
 
             &-tech {
                 color: white;
