@@ -349,9 +349,14 @@
 }
 
 .volunteer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 4rem;
+    column-gap: 2rem;
+
+    @media screen and (max-width: 1700px) {
+        grid-template-columns: 1fr;
+    }
 
     &__gig {
         display: flex;
@@ -370,27 +375,22 @@
             }
 
             &-paragraph {
-                font-size: 2vh;
+                font-size: 1.8vh;
                 font-weight: 200;
+                line-height: 4vh;
             }
 
             &--responsibilities {
                 display: flex;
                 flex-direction: column;
-                row-gap: 1rem;
-                font-size: 2vh;
-                font-weight: 300;
-                line-height: 5vh;
-
-                @media screen and (max-width: 768px) {
-                    font-size: 1.8vh;
-                    font-weight: 300;
-                }
+                font-size: 1.8vh;
+                font-weight: 200;
+                line-height: 4vh;
 
                 &-entry {
                     &--chevron {
-                        width: 2vh;
-                        height: 2vh;
+                        width: 1.5vh;
+                        height: 1.5vh;
                         margin-right: 10px;
                     }
                 }
