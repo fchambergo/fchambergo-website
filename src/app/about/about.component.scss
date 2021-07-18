@@ -27,8 +27,12 @@
 
     &__paragraph {
         line-height: 4rem;
-        font-weight: 100;
-        font-size: 3vh;
+        font-weight: 200;
+        font-size: 2.5vh;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 2vh;
+        }
     }
 }
 
@@ -55,8 +59,8 @@
         &--responsibilities {
             display: flex;
             flex-direction: column;
-            row-gap: 1rem;
-            font-size: 2vh;
+            row-gap: .2rem;
+            font-size: 1.8vh;
             font-weight: 300;
             line-height: 1.5rem;
     
@@ -67,8 +71,8 @@
                 }
 
                 &--chevron {
-                    width: 2vh;
-                    height: 2vh;
+                    width: 1.5vh;
+                    height: 1.5vh;
                     margin-right: 10px;
                     fill: #04181F;
                 }
